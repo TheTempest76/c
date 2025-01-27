@@ -5,8 +5,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 export async function GET(
-  request: Request,
-  { params }: { params: { postId: string } }
+  request: Request
 ) {
   try {
     const { userId } = await auth();
@@ -15,7 +14,8 @@ export async function GET(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { postId } = await params;
+    const url = new URL(request.url);
+    const postId = url.pathname.split('/').pop();
     
     if (!postId) {
       return NextResponse.json({ error: "Post ID is required" }, { status: 400 });

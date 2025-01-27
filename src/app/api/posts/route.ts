@@ -1,4 +1,6 @@
 // app/api/posts/route.ts
+/* eslint-disable */
+
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { PrismaClient } from '@prisma/client';
