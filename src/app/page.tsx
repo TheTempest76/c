@@ -51,7 +51,7 @@ export default async function Home() {
       <div className="relative h-screen ">
 
         <img
-          src="https://community.thriveglobal.com/wp-content/uploads/2018/09/helping-hands.jpg"
+          src="https://media.istockphoto.com/id/1498170916/photo/a-couple-is-taking-a-bag-of-food-at-the-food-and-clothes-bank.jpg?s=612x612&w=0&k=20&c=0fnD_g46lvoZ5NdzX5zYOSM4PzM95ezfs5uMe9D1QKs="
           alt="People helping each other in the community"
           className="w-full h-full object-cover"
         />
